@@ -3,7 +3,7 @@ jQuery ->
 
   if $("body").is(".jam-page")
     channel = pusher.subscribe($("#jam-page .jam-slug-channel").text())
-    channel.bind "music-played", (data) ->
+    channel.bind "instrument-played", (data) ->
       delay = 1/4
       velocity = 127
       note = MIDI.pianoKeyOffset + data.note
