@@ -3,7 +3,7 @@ class Api::V1::JamsController < ApplicationController
   before_filter :authenticate_token, only: [:play]
 
   def play
-    Player.new(params[:instrument])
+    Player.new(params[:audio_channel], params[:instrument]).play
   end
 
   private
