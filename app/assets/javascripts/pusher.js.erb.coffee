@@ -8,5 +8,5 @@ jQuery ->
       velocity = 127
       note = MIDI.pianoKeyOffset + data.note
 
-      MIDI.programChange data.channel, data.instrument
+      MIDI.programChange data.channel, 114
       MIDI.noteOn data.channel, note, velocity, delay
