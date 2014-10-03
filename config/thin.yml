@@ -6,10 +6,10 @@ wait: 30
 log: /home/deploy/apps/instrumento/log/thin.log
 max_conns: 1024
 require: []
+threaded: true
+no-epoll: true
 environment: production
 max_persistent_conns: 512
 servers: 1
 daemonize: true
-port: 3000
-address: 0.0.0.0
-onebyone: true
+socket: /home/deploy/apps/instrumento/sockets/thin.sock
