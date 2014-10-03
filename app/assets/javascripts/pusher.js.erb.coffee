@@ -6,7 +6,7 @@ jQuery ->
     channel.bind "instrument-played", (data) ->
       delay = 1/4
       velocity = 127
-      note = MIDI.pianoKeyOffset + data.instrument
+      note = MIDI.pianoKeyOffset + parseInt(data.instrument)
 
       MIDI.programChange data.audio_channel, 114
-      MIDI.noteOn data.channel, note, velocity, delay
+      MIDI.noteOn parseInt(data.audio_channel), note, velocity, delay
