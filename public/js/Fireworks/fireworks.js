@@ -45,7 +45,7 @@ var Fireworks = (function() {
 
     // and another one for, like, an off screen buffer
     // because that's rad n all
-    fireworkCanvas = document.createElement('canvas');
+    fireworkCanvas = document.getElementById('jam-canvas');
     fireworkContext = fireworkCanvas.getContext('2d');
 
     // set up the colours for the fireworks
@@ -56,8 +56,8 @@ var Fireworks = (function() {
 
     // add the canvas in
     document.body.appendChild(mainCanvas);
-    document.addEventListener('mouseup', createFirework, true);
-    document.addEventListener('touchend', createFirework, true);
+    // document.addEventListener('mouseup', createFirework, true);
+    // document.addEventListener('touchend', createFirework, true);
 
     // and now we set off
     update();
@@ -93,7 +93,7 @@ var Fireworks = (function() {
       fireworkContext.fillStyle = "hsl(" + Math.round(c * 3.6) + ",100%,60%)";
       fireworkContext.fillRect(gridX, gridY, gridSize, gridSize);
       fireworkContext.drawImage(
-        Library.bigGlow,
+        Library.bigGlow(),
         gridX,
         gridY);
     }
@@ -314,7 +314,7 @@ Particle.prototype = {
     context.drawImage(fireworkCanvas,
       this.gridX, this.gridY, 12, 12,
       x - 6, y - 6, 12, 12);
-    context.drawImage(Library.smallGlow, x - 3, y - 3);
+    context.drawImage(Library.smallGlow(), x - 3, y - 3);
 
     context.restore();
   }
@@ -326,8 +326,8 @@ Particle.prototype = {
  * we want to reference later on
  */
 var Library = {
-  bigGlow: document.getElementById('big-glow'),
-  smallGlow: document.getElementById('small-glow')
+  bigGlow: function() { return document.getElementById('big-glow') },
+  smallGlow: function() { return document.getElementById('small-glow') }
 };
 
 /**

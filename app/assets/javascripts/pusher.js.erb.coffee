@@ -10,3 +10,5 @@ jQuery ->
 
       MIDI.programChange data.audio_channel, 114
       MIDI.noteOn parseInt(data.audio_channel), note, velocity, delay
+
+      Fireworks.createParticle()
