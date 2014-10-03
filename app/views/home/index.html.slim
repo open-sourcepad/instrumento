@@ -29,10 +29,11 @@
 
     .create-channel
       .form-group
-        .row
-          .col-md-7
-            .pull-right
-              input.form-control type="text" placeholder="Enter channel name..." autofocus="true"
-          .col-md-5
-            .pull-left
-              button.btn.btn-md.btn-success Create
+        = form_for(Jam.new) do |f|
+          .row
+            .col-md-7
+              .pull-right
+                = f.text_field :name
+            .col-md-5
+              .pull-left
+                button.btn.btn-md.btn-success Create
