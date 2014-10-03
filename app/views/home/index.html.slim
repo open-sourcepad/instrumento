@@ -1,6 +1,6 @@
 = video_tag "background.mp4", preload: 'auto', loop: 'loop', autoplay: 'autoplay'
 
-.team.pull-right
+.splash.pull-right
   h1.text-center INSTRUMENTO
   h5
     | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
@@ -26,7 +26,7 @@
               = "# #{s}"
           .col-md-5
             .pull-left
-              a.btn.btn-primary.btn-md.text-center href="/jams/#{s}" Join
+              a.btn.btn-primary.btn-sm.text-center href="/jams/#{s}" Join
 
     .create-channel
       .form-group
@@ -34,7 +34,7 @@
           .row
             .col-md-7
               .pull-right
-                = f.text_field :name
+                = f.text_field :name, class: 'form-control', placeholder: 'Enter channel name...'
             .col-md-5
               .pull-left
                 button.btn.btn-md.btn-success Create

@@ -1,8 +1,13 @@
 #jam-page
   ruby:
     content_for :body_class, 'jam-page'
-  
+
   span.jam-slug-channel class='hidden' = (@jam.slug + "-jam-channel").strip
   = render "shared/pusher"
 
-  h1 Lets Jam!
+  aside#library
+    img src="/images/nightsky.png" id="nightsky">
+    img src="/images/big-glow.png" id="big-glow">
+    img src="/images/small-glow.png" id="small-glow">
+
+  canvas width="1392" height="494"

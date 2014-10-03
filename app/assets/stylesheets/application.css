@@ -17,6 +17,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  background: #000;
+}
+
 video {
   position: fixed;
   right: 0;
@@ -28,7 +32,7 @@ video {
   z-index: -100;
 }
 
-.team {
+.splash {
   font-weight: 100;
   background: rgba(0,0,0,.3);
   color: #fff;
@@ -37,16 +41,29 @@ video {
   margin: 2rem;
   margin-top: 5%;
   font-size: 14px;
+  overflow-y: scroll;
 }
 
-.team .channels {
+.splash .channels {
   font-size: 18px;
 }
 
-.team .channels .create-channel {
+.splash .channels a {
+  margin-bottom: 10px;
+}
+
+.splash .channels .create-channel {
   margin: 30px auto;
 }
 
-.hidden {
+.splash .channels .create-channel input {
+  color: #000;
+}
+
+.hidden, #library {
   display: none;
+}
+
+canvas {
+  -webkit-transform: translateZ(0);
 }
