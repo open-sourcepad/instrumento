@@ -15,5 +15,6 @@
 /log/*.log
 /tmp
 /config/settings.yml
-/config/*.yml
+/config/database.yml
 .DS_Store
+/*.orig
