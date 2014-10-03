@@ -22,10 +22,11 @@
         .row
           .col-md-7
             .pull-right
-              = "# #{i}"
+              - s = i.gsub("-channel","")
+              = "# #{s}"
           .col-md-5
             .pull-left
-              a.btn.btn-primary.btn-md.text-center href="/jams/#{i}" Join
+              a.btn.btn-primary.btn-md.text-center href="/jams/#{s}" Join
 
     .create-channel
       .form-group

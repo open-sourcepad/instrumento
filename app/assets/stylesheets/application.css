@@ -46,3 +46,7 @@ video {
 .team .channels .create-channel {
   margin: 30px auto;
 }
+
+.hidden {
+  display: none;
+}
