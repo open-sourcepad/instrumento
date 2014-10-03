@@ -1,1 +1,38 @@
-h1 Home
+= video_tag "background.mp4", preload: 'auto', loop: 'loop', autoplay: 'autoplay'
+
+.team.pull-right
+  h1.text-center INSTRUMENTO
+  h5
+    | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+    | Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named
+    | Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which
+    | roasted parts of sentences fly into your mouth.
+
+  .text-center
+    h5 Emilio Pugeda
+    h5 Joel Lagana
+    h5 Jonathan Andy Lim
+    h5 Joshua Wines
+  hr
+  h3.text-center Jam Sessions
+
+  .channels
+    - @channels.collect do |key, v|
+      - v.collect do |i, n|
+        .row
+          .col-md-7
+            .pull-right
+              = "# #{i}"
+          .col-md-5
+            .pull-left
+              a.btn.btn-primary.btn-md.text-center href="/jams/#{i}" Join
+
+    .create-channel
+      .form-group
+        .row
+          .col-md-7
+            .pull-right
+              input.form-control type="text" placeholder="Enter channel name..." autofocus="true"
+          .col-md-5
+            .pull-left
+              button.btn.btn-md.btn-success Create

@@ -12,7 +12,12 @@ gem 'pusher'
 gem 'slim-rails'
 gem 'pg'
 
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+gem 'uglifier', '>= 1.3.0'
+
 group :development do
   gem 'spring'
   gem 'pry'
+  gem 'therubyracer'
 end

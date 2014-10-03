@@ -13,14 +13,14 @@ html
     script src="/inc/Base64.js" type="text/javascript"
     script src="/inc/base64binary.js" type="text/javascript"
     = yield :head
+
   body class="#{yield(:body_class)}"
+
     javascript:
       MIDI.loadPlugin({
         soundfontUrl: "/soundfont/",
         instruments: [ "acoustic_grand_piano", "synth_drum" ],
         callback: function() {}
       });
-
-
 
     = yield
